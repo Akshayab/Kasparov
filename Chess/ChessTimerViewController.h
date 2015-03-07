@@ -28,5 +28,10 @@
 
 @property (strong, nonatomic) NSDate *totalTimeOne;
 @property (strong, nonatomic) NSDate *totalTimeTwo;
+
+@property (strong, nonatomic) NSString *playerOneName;
+@property (strong, nonatomic) NSString *playerTwoName;
+@property (strong, nonatomic) NSString *gameTime;
+
 @end
 

@@ -122,8 +122,9 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"mm:ss.SSS"];
     
-    self.totalTimeOne = [dateFormatter dateFromString:@"10:00.000"];
-    self.totalTimeTwo = [dateFormatter dateFromString:@"10:00.000"];
+    NSString *timeString = [NSString stringWithFormat:@"%@:00.000", self.gameTime];
+    self.totalTimeOne = [dateFormatter dateFromString: timeString];
+    self.totalTimeTwo = [dateFormatter dateFromString: timeString];
     
     self.timer1.text = [dateFormatter stringFromDate:self.totalTimeOne];
     self.timer2.text = [dateFormatter stringFromDate:self.totalTimeTwo];

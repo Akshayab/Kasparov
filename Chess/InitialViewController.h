@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface InitialViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *incompleteLabel;
+@property (strong, nonatomic) IBOutlet UITextField *player2TextField;
+@property (strong, nonatomic) IBOutlet UITextField *gameTimeTextField;
 
+@property (strong, nonatomic) IBOutlet UITextField *player1TextField;
 @end

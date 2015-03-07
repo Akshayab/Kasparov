@@ -7,6 +7,7 @@
 //
 
 #import "InitialViewController.h"
+#import "ChessTimerViewController.h"
 
 @interface InitialViewController ()
 
@@ -33,5 +34,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"timerSegue"]) {
+        ChessTimerViewController *vc = (ChessTimerViewController *)[segue destinationViewController];
+        vc.playerOneName = self.player1TextField.text;
+        vc.playerTwoName = self.player2TextField.text;
+        vc.gameTime = self.gameTimeTextField.text;
+    }
+}
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"timerSegue"]) {
+        if ([self.player1TextField.text isEqualToString: @""] || [self.player2TextField.text isEqualToString:@""] || [self.gameTimeTextField.text isEqualToString: @""]) {
+            self.incompleteLabel.hidden = NO;
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 
 @end
