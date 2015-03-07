@@ -94,6 +94,10 @@
             self.totalTimeTwo = [self.totalTimeTwo dateByAddingTimeInterval:-1.0/10.0];
             
             self.timer2.text = [dateFormatter stringFromDate:self.totalTimeTwo];
+            
+            if ([self.totalTimeTwo compare:[dateFormatter dateFromString:@"00:00.000"]] == NSOrderedAscending) {
+                [self timeCompleted];
+            }
         }
         
         
@@ -118,7 +122,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"mm:ss.SSS"];
     
-    self.totalTimeOne = [dateFormatter dateFromString:@"1:00.000"];
+    self.totalTimeOne = [dateFormatter dateFromString:@"10:00.000"];
     self.totalTimeTwo = [dateFormatter dateFromString:@"10:00.000"];
     
     self.timer1.text = [dateFormatter stringFromDate:self.totalTimeOne];
@@ -137,10 +141,14 @@
 }
 
 - (void)timeCompleted {
+    UIColor *redColor = [UIColor colorWithRed:231.0/255.0 green:76.0/255.0 blue:60.0/255.0 alpha:1.0];
+    self.paused = YES;
+    
     if (self.playerOnePlaying) {
-        UIColor *redColor = [UIColor colorWithRed:231.0/255.0 green:76.0/255.0 blue:60.0/255.0 alpha:1.0];
         self.playerOneView.backgroundColor = redColor;
-        self.paused = YES;
+    }
+    else {
+        self.playerTwoView.backgroundColor = redColor;
     }
 }
 
