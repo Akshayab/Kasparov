@@ -16,6 +16,7 @@
 		80F39B011AAB63D90091C85A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F39AFF1AAB63D90091C85A /* LaunchScreen.xib */; };
 		80F39B0D1AAB63D90091C85A /* ChessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39B0C1AAB63D90091C85A /* ChessTests.m */; };
 		80F39B181AAB66A40091C85A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39B171AAB66A40091C85A /* InitialViewController.m */; };
+		80F39B1B1AABB4E70091C85A /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39B1A1AABB4E70091C85A /* ResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		80F39B0C1AAB63D90091C85A /* ChessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessTests.m; sourceTree = "<group>"; };
 		80F39B161AAB66A40091C85A /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		80F39B171AAB66A40091C85A /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		80F39B191AABB4E70091C85A /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		80F39B1A1AABB4E70091C85A /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				80F39AED1AAB63D90091C85A /* Supporting Files */,
 				80F39B161AAB66A40091C85A /* InitialViewController.h */,
 				80F39B171AAB66A40091C85A /* InitialViewController.m */,
+				80F39B191AABB4E70091C85A /* ResultViewController.h */,
+				80F39B1A1AABB4E70091C85A /* ResultViewController.m */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				80F39B181AAB66A40091C85A /* InitialViewController.m in Sources */,
 				80F39AF91AAB63D90091C85A /* ChessTimerViewController.m in Sources */,
 				80F39AF01AAB63D90091C85A /* main.m in Sources */,
+				80F39B1B1AABB4E70091C85A /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

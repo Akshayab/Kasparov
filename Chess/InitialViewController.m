@@ -17,7 +17,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.player1TextField.delegate = self;
+    self.player2TextField.delegate = self;
+    self.gameTimeTextField.delegate = self;
+    
+    
     // Do any additional setup after loading the view.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+//    [textField resignFirstResponder];
+//    
+//    if (textField == self.player1TextField) {
+//        [self.player2TextField becomeFirstResponder];
+//    }
+//    else if (textField == self.player2TextField) {
+//        [self.gameTimeTextField becomeFirstResponder];
+//    }
+//    
+    [self.view endEditing:YES];
+    return NO;
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [self.view endEditing:YES];
+    return YES;
+}
+
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    // Assign new frame to your view
+    [self.view setFrame:CGRectMake(0,-110,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.view setFrame:CGRectMake(0,0,320,460)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +99,9 @@
     }
     
     return YES;
+}
+
+-(IBAction)resetApp:(UIStoryboardSegue *)segue {
 }
 
 @end

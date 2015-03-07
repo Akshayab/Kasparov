@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="1007" y="344"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="02L-O8-pAr">
             <objects>
-                <viewController id="ofJ-sR-UyD" sceneMemberID="viewController">
+                <viewController id="ofJ-sR-UyD" customClass="ResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7jl-uo-xLc"/>
                         <viewControllerLayoutGuide type="bottom" id="l9e-PG-2YJ"/>
@@ -197,16 +197,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! you finished the game :D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzg-gY-fkx">
-                                <rect key="frame" x="159" y="140" width="322" height="21"/>
+                                <rect key="frame" x="159" y="140" width="321.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who won the game?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVm-OJ-c3e">
+                                <rect key="frame" x="159" y="191" width="158.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jMH-gb-VLV">
+                                <rect key="frame" x="159" y="247" width="341" height="29"/>
+                                <segments>
+                                    <segment title="Player 1"/>
+                                    <segment title="Player 2"/>
+                                    <segment title="Draw"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBO-zQ-Oa3">
+                                <rect key="frame" x="277" y="511" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pdB-q0-Y39" kind="unwind" unwindAction="resetApp:" id="Idz-5n-PRU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jMH-gb-VLV" secondAttribute="centerX" constant="-29.5" id="1hk-JB-QzL"/>
                             <constraint firstAttribute="centerY" secondItem="Nzg-gY-fkx" secondAttribute="centerY" constant="149.5" id="4Sh-Ic-Iph"/>
+                            <constraint firstItem="xVm-OJ-c3e" firstAttribute="leading" secondItem="LjU-8c-47L" secondAttribute="leadingMargin" constant="143" id="CYs-oR-t52"/>
                             <constraint firstAttribute="centerX" secondItem="Nzg-gY-fkx" secondAttribute="centerX" constant="-20" id="F85-zU-soK"/>
+                            <constraint firstItem="xVm-OJ-c3e" firstAttribute="top" secondItem="Nzg-gY-fkx" secondAttribute="bottom" constant="30.5" id="HyY-W2-MvE"/>
+                            <constraint firstItem="jMH-gb-VLV" firstAttribute="top" secondItem="xVm-OJ-c3e" secondAttribute="bottom" constant="35" id="Jz5-Nb-hL8"/>
+                            <constraint firstItem="l9e-PG-2YJ" firstAttribute="top" secondItem="NBO-zQ-Oa3" secondAttribute="bottom" constant="15" id="O5K-rV-LAw"/>
+                            <constraint firstAttribute="centerX" secondItem="NBO-zQ-Oa3" secondAttribute="centerX" constant="-1.5" id="iM1-zL-iSe"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -253,25 +282,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess Showdown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX4-7e-fKs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chess Showdown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX4-7e-fKs">
                                 <rect key="frame" x="271" y="46" width="139" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-ja-dtM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-ja-dtM">
                                 <rect key="frame" x="26" y="174" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oki-Vv-GUq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oki-Vv-GUq">
                                 <rect key="frame" x="26" y="263" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-cm-WZx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-cm-WZx">
                                 <rect key="frame" x="171" y="170" width="166" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="Hf6-fD-YzJ"/>
@@ -279,12 +308,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G77-cm-WBg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G77-cm-WBg">
                                 <rect key="frame" x="171" y="248" width="166" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-rZ-Amo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-rZ-Amo">
                                 <rect key="frame" x="173" y="337" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="x0R-1Z-cfT"/>
@@ -292,13 +321,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time (in minutes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVC-ww-3kq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time (in minutes)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVC-ww-3kq">
                                 <rect key="frame" x="26" y="347" width="130" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out all the information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icn-fj-WKD">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please fill out all the information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icn-fj-WKD">
                                 <rect key="frame" x="178" y="95" width="244" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -343,6 +372,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="aa6-lA-bzk"/>
                     <connections>
                         <outlet property="gameTimeTextField" destination="DHG-rZ-Amo" id="VgM-pJ-btm"/>
                         <outlet property="incompleteLabel" destination="icn-fj-WKD" id="GvM-eE-W4h"/>
@@ -351,6 +381,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHf-M5-fyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pdB-q0-Y39" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="230" y="-106"/>
         </scene>
@@ -363,7 +394,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="xUr-Bx-50B" kind="relationship" relationship="rootViewController" id="Dkq-q7-6Xs"/>
+                        <segue destination="cY2-xc-pZd" kind="relationship" relationship="rootViewController" id="bRJ-26-GJP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQ4-E6-ggT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -371,7 +402,4 @@
             <point key="canvasLocation" x="-410" y="617"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xLI-2O-pUU"/>
-    </inferredMetricsTieBreakers>
 </document>

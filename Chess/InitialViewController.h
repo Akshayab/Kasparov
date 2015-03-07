@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InitialViewController : UIViewController
+@interface InitialViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *incompleteLabel;
 @property (strong, nonatomic) IBOutlet UITextField *player2TextField;
 @property (strong, nonatomic) IBOutlet UITextField *gameTimeTextField;
