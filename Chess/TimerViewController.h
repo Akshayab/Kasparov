@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TimerViewController.h
 //  Chess
 //
 //  Created by Akshay Budhkar on 2015-03-07.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TimerViewController : UIViewController
 
 @end
-

@@ -10,11 +10,12 @@
 		80F39AF01AAB63D90091C85A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39AEF1AAB63D90091C85A /* main.m */; };
 		80F39AF31AAB63D90091C85A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39AF21AAB63D90091C85A /* AppDelegate.m */; };
 		80F39AF61AAB63D90091C85A /* Chess.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F39AF41AAB63D90091C85A /* Chess.xcdatamodeld */; };
-		80F39AF91AAB63D90091C85A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39AF81AAB63D90091C85A /* ViewController.m */; };
+		80F39AF91AAB63D90091C85A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39AF81AAB63D90091C85A /* InitialViewController.m */; };
 		80F39AFC1AAB63D90091C85A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F39AFA1AAB63D90091C85A /* Main.storyboard */; };
 		80F39AFE1AAB63D90091C85A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F39AFD1AAB63D90091C85A /* Images.xcassets */; };
 		80F39B011AAB63D90091C85A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F39AFF1AAB63D90091C85A /* LaunchScreen.xib */; };
 		80F39B0D1AAB63D90091C85A /* ChessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39B0C1AAB63D90091C85A /* ChessTests.m */; };
+		80F39B181AAB66A40091C85A /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F39B171AAB66A40091C85A /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,16 @@
 		80F39AF11AAB63D90091C85A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F39AF21AAB63D90091C85A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		80F39AF51AAB63D90091C85A /* Chess.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chess.xcdatamodel; sourceTree = "<group>"; };
-		80F39AF71AAB63D90091C85A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		80F39AF81AAB63D90091C85A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80F39AF71AAB63D90091C85A /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		80F39AF81AAB63D90091C85A /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		80F39AFB1AAB63D90091C85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80F39AFD1AAB63D90091C85A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80F39B001AAB63D90091C85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		80F39B061AAB63D90091C85A /* ChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F39B0B1AAB63D90091C85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F39B0C1AAB63D90091C85A /* ChessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessTests.m; sourceTree = "<group>"; };
+		80F39B161AAB66A40091C85A /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		80F39B171AAB66A40091C85A /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +88,15 @@
 			children = (
 				80F39AF11AAB63D90091C85A /* AppDelegate.h */,
 				80F39AF21AAB63D90091C85A /* AppDelegate.m */,
-				80F39AF71AAB63D90091C85A /* ViewController.h */,
-				80F39AF81AAB63D90091C85A /* ViewController.m */,
+				80F39AF71AAB63D90091C85A /* InitialViewController.h */,
+				80F39AF81AAB63D90091C85A /* InitialViewController.m */,
 				80F39AFA1AAB63D90091C85A /* Main.storyboard */,
 				80F39AFD1AAB63D90091C85A /* Images.xcassets */,
 				80F39AFF1AAB63D90091C85A /* LaunchScreen.xib */,
 				80F39AF41AAB63D90091C85A /* Chess.xcdatamodeld */,
 				80F39AED1AAB63D90091C85A /* Supporting Files */,
+				80F39B161AAB66A40091C85A /* TimerViewController.h */,
+				80F39B171AAB66A40091C85A /* TimerViewController.m */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -224,7 +229,8 @@
 			files = (
 				80F39AF31AAB63D90091C85A /* AppDelegate.m in Sources */,
 				80F39AF61AAB63D90091C85A /* Chess.xcdatamodeld in Sources */,
-				80F39AF91AAB63D90091C85A /* ViewController.m in Sources */,
+				80F39B181AAB66A40091C85A /* TimerViewController.m in Sources */,
+				80F39AF91AAB63D90091C85A /* InitialViewController.m in Sources */,
 				80F39AF01AAB63D90091C85A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
