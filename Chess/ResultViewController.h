@@ -10,4 +10,9 @@
 
 @interface ResultViewController : UIViewController
 
+@property (nonatomic, strong) NSString *playerOneName;
+@property (nonatomic, strong) NSString *playerTwoName;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *resultUISegment;
+
+
 @end

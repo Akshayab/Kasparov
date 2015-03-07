@@ -7,6 +7,8 @@
 //
 
 #import "ChessTimerViewController.h"
+#import "ResultViewController.h"
+
 #define DEGREES_TO_RADIANS(x) (M_PI * x / 180.0)
 
 @interface ChessTimerViewController ()
@@ -122,7 +124,18 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"mm:ss.SSS"];
     
-    NSString *timeString = [NSString stringWithFormat:@"%@:00.000", self.gameTime];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *number = [formatter numberFromString:self.gameTime];
+    NSString *timeString = [[NSString alloc] init];
+    
+    if (number < [NSNumber numberWithInt:60] && number) {
+        timeString = [NSString stringWithFormat:@"%@:00.000", self.gameTime];
+    }
+    else {
+        timeString = [NSString stringWithFormat:@"59:00.000"];
+    }
+    
     self.totalTimeOne = [dateFormatter dateFromString: timeString];
     self.totalTimeTwo = [dateFormatter dateFromString: timeString];
     
@@ -150,6 +163,14 @@
     }
     else {
         self.playerTwoView.backgroundColor = redColor;
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"resultSegue"]) {
+        ResultViewController *vc = (ResultViewController *)[segue destinationViewController];
+        vc.playerOneName = self.playerOneName;
+        vc.playerTwoName = self.playerTwoName;
     }
 }
 

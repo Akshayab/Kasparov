@@ -81,7 +81,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ofJ-sR-UyD" kind="show" id="hkf-9q-wi4"/>
+                                            <segue destination="ofJ-sR-UyD" kind="show" identifier="resultSegue" id="hkf-9q-wi4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybK-kB-IMT">
@@ -238,6 +238,9 @@
                             <constraint firstAttribute="centerX" secondItem="NBO-zQ-Oa3" secondAttribute="centerX" constant="-1.5" id="iM1-zL-iSe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultUISegment" destination="jMH-gb-VLV" id="BvJ-TI-Rrg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2c-og-dZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

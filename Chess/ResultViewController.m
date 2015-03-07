@@ -19,6 +19,11 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.resultUISegment setTitle:self.playerOneName forSegmentAtIndex:0];
+    [self.resultUISegment setTitle:self.playerTwoName forSegmentAtIndex:1];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
